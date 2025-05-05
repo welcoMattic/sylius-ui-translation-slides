@@ -6,7 +6,7 @@ layout: section-title
 
 ---
 layout: image-right
-image: assets/sylius-admin-product-translation.png
+image: /sylius-admin-product-translation.png
 ---
 
 ## What does Sylius provide?

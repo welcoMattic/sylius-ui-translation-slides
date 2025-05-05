@@ -1,6 +1,6 @@
 ---
 layout: about-me
-imageSrc: assets/msantostefano.jpg
+imageSrc: /msantostefano.jpg
 helloMsg: Hello! 👋
 name: Mathieu Santostefano
 position: left

@@ -14,7 +14,7 @@ layout: section
 
 - **Avoid direct edition** of XLIFF/YAML files
 - **Do not mix up** code and static text
-- **Automate** translation keys extraction
+- **Ease** the translation keys extraction
 - Stick to **translation keys nomenclature**
 - **Suppress deployment dependency** to fix a translation
 
