@@ -1,0 +1,71 @@
+:root {
+  --color-primary: #72d630;
+  --color-secondary: #f5f5f5;
+  --color-info: #26bc94;
+  --color-warning: #ffc932;
+  --color-error: #ee3c3c;
+
+  --title-font-family: "Roboto", Arial, sans-serif;
+  --body-font-family: "Helvetica Neue", "Roboto", Arial, sans-serif;
+  --code-font-family: "Roboto Mono", monospace;
+
+  --font-size: 12px;
+
+  --cover-background-light: url("./../images/syliuscon/background_topography.svg");
+  --cover-background-dark: url("./../images/syliuscon/background_topography_dark.svg");
+
+  --slidev-theme-primary: var(--color-primary);
+  --slidev-code-font-family: var(--code-font-family);
+  --slidev-code-font-size: 11px;
+  --slidev-code-padding: 6px;
+  --slidev-code-line-height: 14px;
+}
+
+html {
+  font-family: var(--body-font-family);
+  font-size: var(--font-size);
+}
+
+html.light {
+  --text-primary: #424242;
+  --text-secondary: rgba(0,0,0,0.67); /* 555555 => ~33% opacity  */
+  --text-tertiary: rgba(0,0,0,0.5); /* #7f7f7f => 50% opacity */
+  --text-border: rgba(0,0,0,0.1); /* #ededed => ~90% opacity */
+  --global-bg: rgb(255, 255, 255);
+}
+
+html.dark {
+  --text-primary: #f5f5f5;
+  --text-secondary: rgba(255,255,255,0.67);
+  --text-tertiary: rgba(255,255,255,0.5);
+  --text-border: rgba(255,255,255,0.1);
+  --global-bg: rgb(0, 0, 0);
+}
+
+html.dark .light,
+html.light .dark {
+  display: none;
+}
+
+input {
+  accent-color: var(--color-secondary);
+}
+
+.opacity-0.hover\:opacity-100.opacity-0 {
+  display: none;
+}
+
+.statistics {
+  text-align: center;
+
+  span {
+    color: var(--color-primary);
+    font-size: 14rem;
+  }
+
+  p {
+    color: var(--text-primary);
+    font-size: 4rem !important;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,112 @@
+.slidev-layout {
+  .poll {
+    /*background-color: var(--bg-code);*/
+    border-radius: var(--slidev-code-radius) !important;
+    border-color: transparent;
+
+    [type='radio'],
+    [type='checkbox'] {
+      border-radius: 100%;
+      height: 3rem;
+      width: 3rem;
+      border-color: var(--text-border);
+    }
+
+    [type='submit'] {
+      margin-top: 2rem;
+      padding: 1rem 3rem;
+      font-size: 1.5rem;
+      border-radius: 0.5rem;
+      color: white;
+      background-color: var(--color-primary);
+    }
+
+    [type='submit']:hover {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    [type='checkbox']:checked,
+    [type='radio']:checked {
+      accent-color: white;
+      background-color: var(--color-primary);
+    }
+
+    .poll-title:first-child {
+      margin-bottom: 3rem;
+      line-height: 1em;
+      font-weight: 700;
+      font-size: 3.62505rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: var(--color-primary);
+        bottom: -2.5rem;
+        width: 12rem;
+        height: 0.6rem;
+        border-radius: 0.3rem;
+      }
+    }
+
+    .poll-question__voted:before {
+      content: '✅';
+    }
+
+    .poll-question__voted {
+      margin-top: 6rem;
+      line-height: 1em;
+      font-size: 3rem;
+    }
+
+    .poll-question__item-label li {
+      margin-top: 2px;
+      line-height: 2.4rem !important;
+    }
+  }
+
+  .poll-result {
+    @apply rounded-lg !pl-2 !pr-2;
+  }
+
+  .poll-result::before {
+    background-color: var(--color-secondary);
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    z-index: 0;
+    @apply rounded-md;
+  }
+
+  .poll-result__bar {
+    background-color: var(--color-primary);
+    z-index: 0;
+  }
+
+  .poll-result__bar {
+    background-color: unset !important;
+  }
+
+  .poll-result__answer li::marker {
+      content: '✅';
+  }
+
+  li.opacity-50 .poll-result__answer li::marker {
+    content: '❌';
+  }
+
+  .poll-result__values {
+    display: flex;
+  }
+
+  .poll-result__count {
+    font-size: 70%;
+    z-index: 0;
+    @apply ml-1;
+  }
+}

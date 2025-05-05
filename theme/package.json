@@ -1,0 +1,82 @@
+{
+  "name": "slidev-theme-smile",
+  "version": "0.8.2",
+  "description": "Smile theme for Slidev",
+  "homepage": "https://github.com/Smile-SA/slidev-theme-smile",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Smile-SA/slidev-theme-smile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Smile-SA/slidev-theme-smile/issues"
+  },
+  "scripts": {
+    "build": "slidev build example.md",
+    "dev": "slidev example.md --open",
+    "export": "slidev export example.md",
+    "screenshot": "slidev export example.md --format png",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'feat(docs): updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'feat(docs): updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'feat(docs): updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
+  },
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "author": {
+    "name": "Tony Cabaye",
+    "email": "tonai59+github@gmail.com",
+    "url": "https://github.com/tonai"
+  },
+  "license": "GPL",
+  "engines": {
+    "node": ">=14.0.0",
+    "slidev": ">=0.32.1"
+  },
+  "dependencies": {
+    "@iconify-json/mdi": "^1.1.43"
+  },
+  "devDependencies": {
+    "@slidev/cli": "0.x",
+    "generate-changelog": "^1.8.0"
+  },
+  "slidev": {
+    "colorSchema": "both",
+    "highlighter": "shiki",
+    "lineNumbers": true,
+    "defaults": {
+      "addons": [
+        "slidev-component-poll"
+      ],
+      "centeredSlides": true,
+      "class": "text-right",
+      "contextMenu": false,
+      "css": "unocss",
+      "download": false,
+      "drawings": {
+        "presenterOnly": true,
+        "persist": false,
+        "syncAll": true
+      },
+      "favicon": "/theme/favicon.ico",
+      "fonts": {
+        "sans": "Roboto",
+        "mono": "Roboto Mono",
+        "weights": "200,400,600,900",
+        "fallback": false
+      },
+      "hideInToc": true,
+      "highlighter": "shiki",
+      "lineNumbers": true,
+      "mdc": true,
+      "monaco": false,
+      "pollSettings": {
+        "anonymous": true
+      },
+      "record": false,
+      "routerMode": "hash",
+      "title": "SensioLabs Training",
+      "transition": "slide-left"
+    }
+  }
+}

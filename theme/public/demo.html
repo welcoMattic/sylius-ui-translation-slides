@@ -1,0 +1,8 @@
+<pre id="result"></pre>
+<script type="module">
+  import intersection from './intersection.js';
+  const result = intersection([1,2,3,4], [2,4,6,8]);
+  document
+    .querySelector('#result')
+    .innerText = JSON.stringify(result);
+</script>

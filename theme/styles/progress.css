@@ -1,0 +1,13 @@
+.progress--intro {
+  --active-color: var(--color-secondary);
+  --stroke-color: #ffffff;
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.progress__tooltip {
+  img {
+    display: inline-block;
+    height: 1em;
+  }
+}
