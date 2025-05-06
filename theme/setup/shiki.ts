@@ -15,6 +15,7 @@ export default defineShikiSetup(() => {
       'yaml',
       'dotenv',
       'diff',
+      'ini',
     ],
   }
 })

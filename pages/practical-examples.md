@@ -106,7 +106,8 @@ composer require symfony/lokalise-translation-provider
 
 - Configure the provider
 ```dotenv 
-# .env
+# .env.local
+# Or use Symfony secrets
 LOKALISE_DSN=lokalise://PROJECT_ID:API_KEY@default
 ```
 
@@ -125,7 +126,7 @@ bin/console translation:push lokalise --domain messages
 
 <!--
 - Choose your TMS, install its provider into your app
-- Configure the provider with your Project ID and API key
+- Configure the provider with your Project ID and API key (be sure to use safely your credentials, in .local file or using Symfony secrets)
 - Push translations of "messages" domain in all enabled locales of your app to the TMS
 - Make your changes
 -->

@@ -13,7 +13,7 @@ layout: section
 <v-switch>
   <template #1> 
 
-## Translation standard format?
+## Translation file standard format?
 
   </template>
   <template #2> 
@@ -24,7 +24,7 @@ layout: section
 </v-switch>
 
 <!--
-- Is there a standard format for translation?
+- Is there a standard file format for translation?
 - Yes, but. JSON, INI, YAML, PO, CSV, XLIFF, etc.
 -->
 
@@ -62,6 +62,73 @@ layout: section
 
 <!--
 Extract of a XLIFF 1.2 translation file from Symfony
+-->
+
+---
+layout: section
+---
+
+# Translation in software industry
+
+ICU message format
+
+```xml
+<trans-unit id="invitation_title">
+  <source>invitation_title</source>
+  <!-- the 'other' key is required, and is selected if no other case matches -->
+  <target>{organizer_gender, select,
+    female   {{organizer_name} has invited you to her party!}
+    male     {{organizer_name} has invited you to his party!}
+    multiple {{organizer_name} have invited you to their party!}
+    other    {{organizer_name} has invited you to their party!}
+    }</target>
+</trans-unit>
+```
+
+<!--
+- This is the recommended way to format your messages
+- It acts like a switch statement in PHP
+- It support pluralization (count keyword), and cases (select keyword) 
+-->
+
+---
+layout: section
+---
+
+# Translation in software industry
+
+ICU message format
+
+```xml
+<trans-unit id="invitation_description">
+  <source>invitation_description</source>
+  <!-- the 'other' key is required, and is selected if no other case matches -->
+  <target>{gender_of_host, select,
+    female {{num_guests, plural, offset:1
+    =0    {{host} does not give a party.}
+    =1    {{host} invites {guest} to her party.}
+    =2    {{host} invites {guest} and one other person to her party.}
+    other {{host} invites {guest} and # other people to her party.}
+    }}
+    male {{num_guests, plural, offset:1
+    =0    {{host} does not give a party.}
+    =1    {{host} invites {guest} to his party.}
+    =2    {{host} invites {guest} and one other person to his party.}
+    other {{host} invites {guest} and # other people to his party.}
+    }}
+    other {{num_guests, plural, offset:1
+    =0    {{host} does not give a party.}
+    =1    {{host} invites {guest} to their party.}
+    =2    {{host} invites {guest} and one other person to their party.}
+    other {{host} invites {guest} and # other people to their party.}
+    }}
+    }</target>
+</trans-unit>
+```
+
+<!--
+- You can combine the select and plural keywords to handle complex cases
+- It is encouraged to provide XLIFF notes to help translators understand the context and all cases handled by such a formatted message
 -->
 
 ---
