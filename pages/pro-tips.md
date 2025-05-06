@@ -46,7 +46,7 @@ layout: section
 
 # Pro Tips ©
 
-In `test` environment, leverage `IdentityTranslator from Symfony to avoid breaking your tests when translations are changed.
+In `test` environment, leverage `IdentityTranslator` from Symfony to avoid breaking your tests when translations are changed.
 
 ```yaml
 # services.yaml

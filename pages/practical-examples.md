@@ -76,7 +76,10 @@ layout: section
    - ```xml
      <!-- in translations/messages.en_US.xlf -->
      <source>sylius.ui.dashboard</source>
+     <target>Dashboard</target>
      ```
+     
+![sylius-dashboard.png](../assets/sylius-dashboard.png)
 
 </v-clicks>
 
@@ -112,23 +115,29 @@ LOKALISE_DSN=lokalise://PROJECT_ID:API_KEY@default
 bin/console translation:push lokalise --domain messages
 ```
 
+- Make your changes on TMS platform
+```diff
+- Dashboard
++ ✨ Brand new shiny Dashboard ✨
+```
+
 </v-clicks>
 
 <!--
 - Choose your TMS, install its provider into your app
 - Configure the provider with your Project ID and API key
 - Push translations of "messages" domain in all enabled locales of your app to the TMS
+- Make your changes
 -->
 
 ---
 layout: section
 ---
 
-# Make your changes and pull back translations
+# Make your changes and pull
 
 <v-clicks>
 
-- Make your changes in the TMS
 - Pull translations
 ```shell
 bin/console translation:pull lokalise --domain messages
@@ -139,8 +148,9 @@ bin/console translation:pull lokalise --domain messages
 bin/console cache:clear
 ```
 
-- Check the translations in your app
 - Tada! 🎉
+
+![sylius-dashboard-updated.png](../assets/sylius-dashboard-updated.png)
 
 </v-clicks>
 
@@ -149,6 +159,7 @@ bin/console cache:clear
 - Pull translations from the TMS using `translation:pull` command
 - Clear the cache to have fresh translations
 - Check the translations in your app!
+- It's been done without editing manually the translation files
 -->
 
 ---

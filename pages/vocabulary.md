@@ -45,6 +45,10 @@ layout: section
 
 > Designing a software that can be adapted to various languages without engineering changes.
 
+<!--
+- Prepare the software code for localization
+-->
+
 ---
 layout: section
 ---
@@ -57,6 +61,10 @@ layout: section
 
 > Process of adapting an internationalized software for a specific region or language by translating texts, formatting date or currency.
 
+<!--
+- Extracting translations keys from code to translation files
+- Develop or use tools to be able to format date, time, currency, etc.
+-->
 
 ---
 layout: section
