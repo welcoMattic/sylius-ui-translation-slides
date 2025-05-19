@@ -69,15 +69,24 @@ layout: section
 <v-clicks>
 
 1. Extract existing translations
+<div class="code-lg">
+   
    - ```shell
      bin/console translation:extract en_US --domain messages --force
      ```
+
+</div>
+
 2. Find the one you want to override
+<div class="code-lg">
+
    - ```xml
      <!-- in translations/messages.en_US.xlf -->
      <source>sylius.ui.dashboard</source>
      <target>Dashboard</target>
      ```
+
+</div>
      
 ![sylius-dashboard.png](../assets/sylius-dashboard.png)
 
@@ -100,27 +109,52 @@ layout: section
 
 - Choose your TMS => Lokalise
 - Install the provider
+<div class="code-lg">
+
 ```shell
 composer require symfony/lokalise-translation-provider
 ```
 
+</div>
+
 - Configure the provider
+<div class="code-lg">
+
 ```dotenv 
-# .env.local
-# Or use Symfony secrets
+# .env.local / Or use Symfony secrets
 LOKALISE_DSN=lokalise://PROJECT_ID:API_KEY@default
 ```
 
+</div>
+
+</v-clicks>
+
+---
+layout: section
+---
+
+# Push translations to a TMS
+
+<v-clicks>
+
 - Push translations
+<div class="code-lg">
+
 ```shell 
 bin/console translation:push lokalise --domain messages
 ```
 
+</div>
+
 - Make your changes on TMS platform
+<div class="code-lg">
+
 ```diff
 - Dashboard
 + ✨ Brand new shiny Dashboard ✨
 ```
+
+</div>
 
 </v-clicks>
 
@@ -140,14 +174,22 @@ layout: section
 <v-clicks>
 
 - Pull translations
+<div class="code-lg">
+
 ```shell
 bin/console translation:pull lokalise --domain messages
 ```
 
+</div>
+
 - Clear the cache
+<div class="code-lg">
+
 ```shell
 bin/console cache:clear
 ```
+
+</div>
 
 - Tada! 🎉
 
@@ -173,12 +215,17 @@ layout: section
 
 - Ensure you have StimulusBundle installed and configured (with AssetMapper or Webpack Encore)
 - Install UX Translator
+<div class="code-lg">
 
 ```shell
 composer require symfony/ux-translator
 ```
 
+</div>
+
 - Configure the domains you want to use on frontend
+<div class="code-lg">
+
 ```yaml
 ux_translator:
     domains: ~ # all domains
@@ -187,6 +234,8 @@ ux_translator:
     # or
     domains: '!foo' # Include all domains, except 'foo'
 ```
+
+</div>
 
 </v-clicks>
 
@@ -203,10 +252,11 @@ layout: section
 # Get translations from JavaScript
 
 A `translator.js` file will be generated
+<div class="code-lg">
 
 ```javascript
 // assets/translator.js
-import { trans, getLocale, setLocale, setLocaleFallbacks, throwWhenNotFound } from '@symfony/ux-translator';
+import { trans, setLocaleFallbacks, throwWhenNotFound } from '@symfony/ux-translator';
 import { localeFallbacks } from '../var/translations/configuration';
 
 setLocaleFallbacks(localeFallbacks);
@@ -215,6 +265,8 @@ throwWhenNotFound(true)
 export { trans }
 export * from '../var/translations';
 ```
+
+</div>
 
 <!--
 - A `translator.js` file will be generated
@@ -234,12 +286,16 @@ You can now use your translations in frontend code
 <v-clicks>
 
 - Configure the default locale
+<div class="code-lg">
 
 ```html
 <html data-symfony-ux-translator-locale="{{ app.request.locale }}">
 ```
 
+</div>
+
 - Use the `trans` function with keys exported as constants
+<div class="code-lg">
 
 ```javascript
 import {
@@ -249,6 +305,8 @@ import {
 
 trans(SYLIUS_UI_DASHBOARD); // will return "✨ Brand new shiny Dashboard ✨"
 ```
+
+</div>
 
 </v-clicks>
 
@@ -264,6 +322,7 @@ layout: section
 # Get translations from JavaScript
 
 Same as you would do in PHP, you can pass parameters, domain and locale
+<div class="code-lg">
 
 ```javascript {hide|all}
 import {
@@ -280,6 +339,9 @@ trans(TRANSLATION_IN_ANOTHER_DOMAIN, {}, 'validators');
 trans(TRANSLATION_MULTI_LOCALES, {}, 'messages', 'fr');
 trans(TRANSLATION_MULTI_LOCALES, {}, 'messages', 'it');
 ```
+
+</div>
+
 <!--
 - Use the `trans` function with parameters
 - Use the `trans` function with a different domain

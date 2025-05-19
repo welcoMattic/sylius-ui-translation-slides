@@ -11,8 +11,8 @@
 
   --font-size: 12px;
 
-  --cover-background-light: url("./../images/syliuscon/background_topography.svg");
-  --cover-background-dark: url("./../images/syliuscon/background_topography_dark.svg");
+  --cover-background-light: url("./../images/syliuscon/cover.jpg");
+  --cover-background-dark: url("./../images/syliuscon/cover.jpg");
 
   --slidev-theme-primary: var(--color-primary);
   --slidev-code-font-family: var(--code-font-family);
@@ -42,17 +42,8 @@ html.dark {
   --global-bg: rgb(0, 0, 0);
 }
 
-html.dark .light,
-html.light .dark {
-  display: none;
-}
-
 input {
   accent-color: var(--color-secondary);
-}
-
-.opacity-0.hover\:opacity-100.opacity-0 {
-  display: none;
 }
 
 .statistics {

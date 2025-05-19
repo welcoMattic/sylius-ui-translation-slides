@@ -4343,6 +4343,11 @@ slidev-component-poll@^2.1.0:
     "@vueuse/motion" "^2.2.5"
     uuid "^10.0.0"
 
+slidev-component-progress@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/slidev-component-progress/-/slidev-component-progress-1.1.0.tgz#7fb5c189cccde01dbceb935d53faf664de0525be"
+  integrity sha512-E7PmSvZh5RzjrumzzLE2xx/ooxQl5dO40dgPw1V/b9m+Y6P61Sv2om07ffP3G9oVmYV7cKMe1nH0yD2NrCBL+A==
+
 source-map-js@^1.0.1, source-map-js@^1.2.0, source-map-js@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.1.tgz#1ce5650fddd87abc099eda37dcff024c2667ae46"

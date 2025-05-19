@@ -14,11 +14,14 @@ hideInToc: true
 download: true
 ---
 
-# [Efficiently translate UIs]{style="color:#0c1b33"}
-# [of your Sylius applications]{style="color:#0c1b33"}
+<h1 class="bg-gray-950/50 py-8">Efficiently translate UIs <br/> of your Sylius applications</h1>
 
-<SyliusDays2025Logo height="4rem" class="logo absolute bottom-0 left-8" />
-<Logo height="2rem" class="absolute bottom-0 right-2"/>
+<div class="backdrop-blur-md absolute left-0 bottom-0 w-full block py-4">
+    <div class="flex justify-around space-x-96 items-center">
+        <SyliusDays2025Logo height="4rem" />
+        <Logo height="2rem" />
+    </div>
+</div>
 
 ---
 src: ./pages/speaker.md

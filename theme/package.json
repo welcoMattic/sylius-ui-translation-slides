@@ -46,7 +46,8 @@
     "lineNumbers": true,
     "defaults": {
       "addons": [
-        "slidev-component-poll"
+        "slidev-component-poll",
+        "slidev-component-progress"
       ],
       "centeredSlides": true,
       "class": "text-right",

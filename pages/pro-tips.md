@@ -47,6 +47,7 @@ layout: section
 # Pro Tips ©
 
 In `test` environment, leverage `IdentityTranslator` from Symfony to avoid breaking your tests when translations are changed.
+<div class="code-lg">
 
 ```yaml
 # services.yaml
@@ -54,6 +55,8 @@ when@test:
     services:
         translator: '@identity_translator'
 ```
+
+</div>
 
 https://github.com/symfony/symfony/blob/7.3/src/Symfony/Component/Translation/IdentityTranslator.php
 
@@ -64,10 +67,13 @@ layout: section
 # Pro Tips ©
 
 Be careful with OPCache configuration!
+<div class="code-lg">
 
 ```ini
 opcache.validate_timestamps = 0
 ```
+
+</div>
 
 ⬆️ This will **prevent OPCache from invalidating** the cache when files are changed, **including translations cached files**.
 
@@ -80,11 +86,14 @@ layout: section
 ⬇️ To prevent this, enable `opcache.validate_timestamps` and set the `opcache.revalidate_freq` value.
 
 It will refresh the **whole OPCache** every `{SECONDS}` seconds.
+<div class="code-lg">
 
 ```ini
 opcache.validate_timestamps = 1
 opcache.revalidate_freq = {SECONDS} 
 ```
+
+</div>
 
 ⚠️ Use this tip wisely, depending on your production constraints and existing configuration!
 
@@ -95,12 +104,15 @@ layout: section
 # Pro Tips ©
 
 Alternatively, you can decorate `push` and `pull` command to manually clear the OPCache.
+<div class="code-lg">
 
 ```php
 opcache_reset();
 // or
 opcache_invalidate($filename, true);
 ```
+
+</div>
 
 ---
 layout: section

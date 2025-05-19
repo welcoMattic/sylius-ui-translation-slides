@@ -1,7 +1,7 @@
 <template>
   <footer
     v-if="!['cover', 'section-title', 'module-cover', 'about-me'].includes($slidev.nav.currentLayout)"
-    class="absolute flex bottom-0 left-0 right-0 py-2 px-4 z-1"
+    class="absolute flex bottom-0 left-0 right-0 py-2 px-4"
   >
     <div class="font-size-5 font-semibold">
       {{ $slidev.nav.currentPage }}

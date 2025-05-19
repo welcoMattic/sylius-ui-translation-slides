@@ -5,6 +5,5 @@ import './layout.css'
 
 import './pager.css'
 import './poll.css'
-import './progress.css'
 
 import './helpers.css'
